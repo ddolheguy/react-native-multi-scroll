@@ -1,6 +1,6 @@
 {
-  "name": "react-native-rc-scroll",
-  "version": "0.1.2",
+  "name": "react-native-multi-scroll",
+  "version": "0.1.3",
   "description": "Supports multiple scroll views in a single screen",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -36,7 +36,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-rc-scroll-example",
+    "example": "yarn workspace react-native-multi-scroll-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",

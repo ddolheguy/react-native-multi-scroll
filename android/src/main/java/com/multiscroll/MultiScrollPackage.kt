@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.ViewManager
 
 class MultiScrollPackage : ReactPackage {
   override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return listOf(MultiScrollModule(reactContext))
+    return listOf(NativeSyncScrollViews(reactContext))
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
