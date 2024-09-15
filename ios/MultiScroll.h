@@ -1,12 +1,6 @@
-
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "RNMultiScrollSpec.h"
-
-@interface MultiScroll : NSObject <NativeMultiScrollSpec>
-#else
+#import <Foundation/Foundation.h>
+#import <React/RCTViewManager.h>
 #import <React/RCTBridgeModule.h>
 
-@interface MultiScroll : NSObject <RCTBridgeModule>
-#endif
-
+@interface NativeSyncScrollViews : RCTViewManager
 @end

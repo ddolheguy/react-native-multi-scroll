@@ -1,7 +1,7 @@
 {
   "name": "react-native-multi-scroll",
   "version": "0.1.0",
-  "description": "None",
+  "description": "Supports multiple scroll views in a single screen",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -53,7 +53,7 @@
     "type": "git",
     "url": "git+https://github.com/ddolheguy/react-native-multi-scroll.git"
   },
-  "author": "David Dolheguy <ddolheguy@gmail.com> (https://github.com/ddolheguy)",
+  "author": "David Dolheguy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ddolheguy/react-native-multi-scroll/issues"

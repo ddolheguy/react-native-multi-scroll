@@ -1,22 +1,11 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules } from 'react-native';
 
-const LINKING_ERROR =
-  `The package 'react-native-multi-scroll' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
+const { NativeSyncScrollViews = {} } = NativeModules;
 
-const MultiScroll = NativeModules.MultiScroll
-  ? NativeModules.MultiScroll
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return MultiScroll.multiply(a, b);
+interface NativeSyncScrollViewsInterface {
+	syncScrollEvent(primaryNodeID: number, secondaryNodeID: number): void;
 }
+
+export const { syncScrollEvent } = NativeSyncScrollViews;
+
+export default NativeSyncScrollViews as NativeSyncScrollViewsInterface;
